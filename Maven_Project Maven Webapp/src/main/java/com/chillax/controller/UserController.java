@@ -10,13 +10,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;  
   
 import com.chillax.dto.User;  
-import com.chillax.service.IUserService;  
-  
+import com.chillax.service.UserService;
+
 @Controller  
 @RequestMapping("/user")  
 public class UserController {  
     @Resource  
-    private IUserService userService;  
+    private UserService userService;  
       
     @RequestMapping("/userList")  
     public String userList(HttpServletRequest request,Model model){  

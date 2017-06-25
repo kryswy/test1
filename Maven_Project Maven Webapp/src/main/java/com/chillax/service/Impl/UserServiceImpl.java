@@ -5,15 +5,16 @@ import java.util.List;
 import javax.annotation.Resource;  
   
 import org.springframework.stereotype.Service;  
-  
-import com.chillax.dao.IUserDao;  
+    
+import com.chillax.dao.UserDao;
 import com.chillax.dto.User;  
-import com.chillax.service.IUserService;  
+import com.chillax.service.UserService;
+
   
 @Service("userService")  
-public class UserServiceImpl implements IUserService {  
+public class UserServiceImpl implements UserService {  
     @Resource  
-    private IUserDao userDao;  
+    private UserDao userDao;  
       
     public User getUserById(int userId) {  
         return userDao.queryByPrimaryKey(userId);  
